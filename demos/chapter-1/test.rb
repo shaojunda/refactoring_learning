@@ -4,7 +4,7 @@ require_relative "customer"
 
 movie = Movie.new("X man", Movie::REGULAR)
 rental = Rental.new(movie, 3)
-movie1 = Movie.new("X man 2", Movie::REGULAR)
+movie1 = Movie.new("X man 2", Movie::NEW_RELEASE)
 rental1 = Rental.new(movie1, 1)
 customer = Customer.new("lisi")
 customer.add_rental(rental)
