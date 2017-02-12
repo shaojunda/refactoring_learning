@@ -10,12 +10,13 @@
 
 > 几乎所有的方法调用所引入的开销都可以忽略不计。
 
-# 重构的步骤
+# 本例重构的步骤
 
 1. 为需要重构的代码构建一套可靠的测试。
 2. 对需要重构的代码进行分解和再组合。
   - 将过长的代码分解为较短的代码段。
   - 将小代码段分别放到适合它们的类中。
+  - 使用查询替换临时变量。
 3. 每进行一次调整就要进行一次测试。
 
 
@@ -33,3 +34,27 @@
 
 3. 用查询替换临时变量（Replace Temp with Query）
   - 临时变量很普遍的一个问题就是它们会引起很多不必要的参数传递。很容易忘记它们的作用，去掉它们可以更专注代码要做的事情。
+
+4. 使用集合闭包方法（Collection Closure Method）简化循环。
+  - [inject][8cb04422]
+  - [collect][eb4f8e7d]
+  - [select][191c67cb]
+
+
+
+
+
+
+
+
+# 参考文章：
+
+[Ruby Refactoring: Replace Loop with Collection Closure Method][dc1b23bf]
+
+[What is a closure?][1f23910d]
+
+  [dc1b23bf]: https://projectramon.wordpress.com/2014/08/01/ruby-refactoring-replace-loop-with-collection-closure-method/ "Ruby Refactoring: Replace Loop with Collection Closure Method"
+  [1f23910d]: http://softwareengineering.stackexchange.com/questions/40454/what-is-a-closure "What is a closure?"
+  [8cb04422]: https://ruby-doc.org/core-2.2.3/Enumerable.html#method-i-inject "inject"
+  [eb4f8e7d]: https://ruby-doc.org/core-2.2.3/Enumerable.html#method-i-collect "collect"
+  [191c67cb]: https://ruby-doc.org/core-2.2.3/Enumerable.html#method-i-select "select"
