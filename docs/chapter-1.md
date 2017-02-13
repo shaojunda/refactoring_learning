@@ -40,6 +40,9 @@
   - [collect][eb4f8e7d]
   - [select][191c67cb]
 
+5. 使用状态或策略模式来替换类型码(Replace Type Code with State/Strategy)
+
+6. 提炼模块(Extract Module)
 
 
 
